@@ -12,6 +12,10 @@ class BusinessObject(BaseModel):
     _id: UUID
     _meta: Metadata
 
+    @property
+    def id(self):
+        return self._id
+
 
 class Constraint(BaseModel):
     constraint_type: str
